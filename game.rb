@@ -2,6 +2,8 @@ require_relative 'board'
 require_relative 'player'
 
 class Game
+  attr_accessor :board
+
   def initialize
     # welcome messages
     puts 'Welcome to Tic Tac Toe!'
@@ -138,8 +140,6 @@ class Game
 
   # checks if draw
   def check_draw
-    return true if @moves == @max_moves
-  
-    false
+    @moves == @max_moves
   end
 end
